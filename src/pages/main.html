@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitmong</title>
+    <script defer src="https://unpkg.com/alpinejs@3.10.4/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/6a44608068.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="font-vazir">
+    <header class="shadow-lg">
+        <div class="mx-4 py-4 pr-20">
+            <nav class="relative flex items-center justify-between">
+                <!--desktop nav-->
+                <div class="hidden md:flex items-center">
+                    <div class="pt-1">
+                        <ul class="flex gap-9">
+                            <li class="nav-item-active"><a href="#">خانه</a></li>
+                            <li class="nav-item"><a href="#">محصولات</a></li>
+                            <li class="nav-item"><a href="#">مقالات آموزشی</a></li>
+                            <li class="nav-item"><a href="#">تماس با ما</a></li>
+                        </ul>
+                    </div>
+                    <div class="mr-20">
+                        <button class="btn">ورود</button>
+                        <!--<i class="fa-light fa-arrow-right-to-bracket"></i>-->
+                        <button class="btn mr-2">سرچ</button><!-- <i class="fa-light fa-magnifying-glass"></i> -->
+                    </div>
+                </div>
+                <!--mobile nav-->
+                <div class="md:hidden" x-data="dropdown">
+                    <div @click="toggle" style="margin-right:-40px;">
+                        <i class="fa-regular fa-bars text-xl"></i>
+                        <!--nav bar button-->
+                    </div>
+                    <div x-show="open" x-cloak class="dropdown-mob" style="margin-right: -30px;">
+                        <div class="absolute" @click="open = false" style="margin-right: -14px; top: 8.5px;">
+                            <i class="fa-light fa-square-xmark"></i>
+                            <!--exite button-->
+                        </div>
+                        <div class="pt-1">
+                            <ul class="flex flex-col gap-9 text-center">
+                                <li class="text-cyan-700"><a href="#">خانه</a></li>
+                                <li class="text-cyan-700"><a href="#">محصولات</a></li>
+                                <li class="text-cyan-700"><a href="#">مقالات آموزشی</a></li>
+                                <li class="text-cyan-700"><a href="#">تماس با ما</a></li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col gap-4 mt-4">
+                            <button class="btn-mob">سرچ</button><!-- <i class="fa-light fa-magnifying-glass"></i> -->
+                            <button class="btn-mob">ورود</button>
+                            <!--<i class="fa-light fa-arrow-right-to-bracket"></i>-->
+                        </div>
+                    </div>
+                </div>
+                <!-- logo -->
+                <div class="flex items-center">
+                    <div class="ml-4 mt-1">
+                        <button class="btn h-5 w-8" style="padding-top: 1px;">O</button>
+                        <!--moon-->
+                        <!-- <i class="fa-light fa-moon"></i> -->
+                        <!--sun-->
+                        <!-- <i class="fa-light fa-sun"></i> -->
+                    </div>
+                    <a href="#">
+                        <h2 class="pt-0.5 text-2xl"><strong style="color:#00757a; font-size: 25px;">S</strong>itmong
+                        </h2>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="shodow-lg first-box">
+            <a href="#">
+                <div class="flex justify-between flex-col lg:flex-row items-center">
+                    <div>
+                        <h1 class="text-2xl mt-8 mr-5 font-bold lg:mb-8 lg:mt-0">برنامه نویسی رو قورت بده!!!</h1>
+                        <p class="mb-12 mr-5 font-bold"> تو این سایت چیزای زیادی برای یاد گرفتن هست
+                            همین حالا آموزش مورد نظرت رو انتخاب کن و از
+                            یادگیری لذت ببر </p>
+                    </div>
+                    <img src="../css/images/Java_Flatline (1).png" alt="">
+                </div>
+            </a>
+        </div>
+    </section>
+    <section>
+        <div class="flex justify-between flex-col lg:flex-row items-center -mb-20">
+            <div>
+                <h1 class="text-2xl mt-8 font-bold text-cyan-800 text-center lg:mb-8">درباره ما</h1>
+                <p class="-mb-20 lg:mb-24 mt-4 lg:mr-16 text-center font-bold text-cyan-700"> تو این سایت چیزای زیادی برای یاد
+                    گرفتن هست
+                    همین حالا آموزش مورد نظرت رو انتخاب کن و از
+                    یادگیری لذت ببر </p>
+            </div>
+            <img src="../css/images/Javascript_Flatline (1).png" width="666" height="666" alt="">
+        </div>
+    </section>
+    <section class="bg-cyan-100 border-2 border-cyan-800 rounded-xl my-16 mx-16">
+        <!--desktop-->
+        <div class="hidden lg:flex flex-col justify-between items-center">
+            <div>
+                <h1 class="text-2xl mt-8 font-bold text-cyan-800 text-center mb-8"> چی دوست داری یاد بگیری؟؟ </h1>
+            </div>
+            <div class="flex flex-row gap-16 my-8">
+                <a href="#">
+                    <div class="group flex flex-col gap-4 items-center">
+                        <img class="hover:w-32" src="../css/images/W.png" width="118.8px" alt="">
+                        <h4 class="text-b-icon text-cyan-600">وردپرس</h4>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="group flex flex-col gap-4 items-center">
+                        <img class="hover:w-32" src="../css/images/git.png" width="118.8px" alt="">
+                        <h4 class="text-b-icon text-violet-500">گیت هاب</h4>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="group flex flex-col gap-4 items-center">
+                        <img class="hover:w-32" src="../css/images/math.png" width="118.8px" alt="">
+                        <h4 class="text-b-icon text-green-600">ریاضیات</h4>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="group flex flex-col gap-4 items-center">
+                        <img class="hover:w-32" src="../css/images/prog.png" width="118.8px" alt="">
+                        <h4 class="text-b-icon text-sky-600">برنامه نویسی</h4>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="group flex flex-col gap-4 items-center">
+                        <img class="hover:w-32" src="../css/images/AI.png" width="118.8px" alt="">
+                        <h4 class="text-b-icon text-red-400">هوش مصنوعی</h4>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="group flex flex-col gap-4 items-center">
+                        <img class="hover:w-32" src="../css/images/computer.png" width="118.8px" alt="">
+                        <h4 class="text-b-icon text-sky-800">طراحی وب</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!--tablet-->
+        <div class="lg:hidden">
+            <div class="hidden sm:flex flex-col justify-between items-center">
+                <div>
+                    <h1 class="text-2xl mt-8 font-bold text-cyan-800 text-center lg:mb-8"> چی دوست داری یاد بگیری؟؟
+                    </h1>
+                </div>
+                <div class="flex flex-col items-center gap-12 my-8">
+                    <div class="flex flex-row items-center gap-12">
+                        <a href="#">
+                            <div class="group flex flex-col gap-4 items-center">
+                                <img class="hover:w-32" src="../css/images/W.png" width="100px" height="100px" alt="">
+                                <h4 class="text-b-icon text-cyan-600">وردپرس</h4>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="group flex flex-col gap-4 items-center">
+                                <img class="hover:w-32" src="../css/images/git.png" width="100px" height="10px alt="">
+                                <h4 class="text-b-icon text-violet-500">گیت هاب</h4>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="group flex flex-col gap-4 items-center">
+                                <img class="hover:w-32" src="../css/images/math.png" width="100px" height="100px alt="">
+                                <h4 class=" text-b-icon text-green-600">ریاضیات</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="flex flex-row items-center gap-12">
+                        <a href="#">
+                            <div class="group flex flex-col gap-4 items-center">
+                                <img class="hover:w-32" src="../css/images/prog.png" width="100px" height="100px alt="">
+                                <h4 class="text-b-icon text-sky-600">برنامه نویسی</h4>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="group flex flex-col gap-4 items-center">
+                                <img class="hover:w-32" src="../css/images/AI.png" width="100px" height="100px alt="">
+                                <h4 class="text-b-icon text-red-400">هوش مصنوعی</h4>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="group flex flex-col gap-4 items-center">
+                                <img class="hover:w-32" src="../css/images/computer.png" width="100px" height="100px alt="">
+                                <h4 class="text-b-icon text-sky-800">طراحی وب</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--mobile-->
+            <div class="sm:hidden flex flex-col justify-between items-center">
+                <div>
+                    <h1 class="text-2xl mt-8 font-bold text-cyan-800 text-center lg:mb-8"> چی دوست داری یاد بگیری؟؟
+                    </h1>
+                </div>
+                <div class="flex flex-col items-center gap-12 my-8">
+                    <div class="flex flex-row items-center gap-12">
+                        <a href="#">
+                            <div class="group flex flex-col gap-4 items-center">
+                                <img class="hover:w-32" src="../css/images/W.png" width="100px" height="100px" alt="">
+                                <h4 class="text-b-icon text-cyan-600">وردپرس</h4>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="group flex flex-col gap-4 items-center">
+                                <img class="hover:w-32" src="../css/images/git.png" width="100px" height="10px alt="">
+                                <h4 class="text-b-icon text-violet-500">گیت هاب</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="flex flex-row items-center gap-12">
+                        <a href="#">
+                            <div class="group flex flex-col gap-4 items-center">
+                                <img class="hover:w-32" src="../css/images/math.png" width="100px" height="100px alt="">
+                                <h4 class="text-b-icon text-green-600">ریاضیات</h4>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="group flex flex-col gap-4 items-center">
+                                <img class="hover:w-32" src="../css/images/prog.png" width="100px" height="100px alt="">
+                                <h4 class="text-b-icon text-sky-600">برنامه نویسی</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="flex flex-row items-center gap-12">
+                        <a href="#">
+                            <div class="group flex flex-col gap-4 items-center">
+                                <img class="hover:w-32" src="../css/images/AI.png" width="100px" height="100px alt="">
+                                <h4 class="text-b-icon text-red-400">هوش مصنوعی</h4>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="group flex flex-col gap-4 items-center">
+                                <img class="hover:w-32" src="../css/images/computer.png" width="100px" height="100px alt="">
+                                <h4 class="text-b-icon text-sky-800">طراحی وب</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section>
+            <!--desktop-->
+            <div class="hidden lg:flex flex-row justify-between items-center mt-44">
+                <h2 class="mr-16 text-xl font-bold text-cyan-800 border-2 border-cyan-700 rounded-md px-2 py-2">آموزش‌های پربازدید</h2>
+                <button class="btn-more ml-16">بیشتر</button>
+            </div>
+            <div class="hidden lg:flex flex-col justify-between items-center mx-16">
+                <div class="flex flex-row justify-between mx-16 -my-8">
+                    <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                        <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                        <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                        <div class="flex flex-row justify-between gap-20 items-center my-8">
+                            <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                            <button class="btn-more">خرید</button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                        <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                        <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                        <div class="flex flex-row justify-between gap-20 items-center my-8">
+                            <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                            <button class="btn-more">خرید</button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                        <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                        <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                        <div class="flex flex-row justify-between gap-20 items-center my-8">
+                            <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                            <button class="btn-more">خرید</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-row justify-between mx-16 -mt-16">
+                    <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                        <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                        <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                        <div class="flex flex-row justify-between gap-20 items-center my-8">
+                            <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                            <button class="btn-more">خرید</button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                        <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                        <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                        <div class="flex flex-row justify-between gap-20 items-center my-8">
+                            <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                            <button class="btn-more">خرید</button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                        <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                        <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                        <div class="flex flex-row justify-between gap-20 items-center my-8">
+                            <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                            <button class="btn-more">خرید</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--tablet-->
+            <div class="lg:hidden">
+                <div class="hidden md:flex flex-row justify-between items-center mt-44">
+                    <h2 class="mr-16 text-xl font-bold text-cyan-800 border-2 border-cyan-700 rounded-md px-2 py-2">آموزش‌های پربازدید</h2>
+                    <button class="btn-more ml-16">بیشتر</button>
+                </div>
+                <div class="hidden md:flex flex-col justify-between items-center mx-16">
+                    <div class="flex flex-row justify-between mx-16 -my-8">
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-between mx-16 -my-8">
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-between mx-16 -mt-16">
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--mobile-->
+            <div class="md:hidden">
+                <div class="flex flex-row justify-between items-center mt-44">
+                    <h2 class="mr-16 text-xl font-bold text-cyan-800 border-2 border-cyan-700 rounded-md px-2 py-2">آموزش‌های پربازدید</h2>
+                    <button class="btn-more ml-16">بیشتر</button>
+                </div>
+                <div class="flex flex-col justify-between items-center mx-16">
+                    <div class="flex flex-row justify-between mx-16 -my-8">
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-between mx-16 -my-8">
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-between mx-16 -my-8">
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-between mx-16 -my-8">
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-between mx-16 -my-8">
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-between mx-16 -mt-16">
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section>
+            <!--desktop-->
+            <div class="hidden lg:flex flex-row justify-between items-center mt-44">
+                <h2 class="mr-16 text-xl font-bold text-cyan-800 border-2 border-cyan-700 rounded-md px-2 py-2">آموزش‌های رایگان</h2>
+                <button class="btn-more ml-16">بیشتر</button>
+            </div>
+            <div class="hidden lg:flex flex-col justify-between items-center mx-16">
+                <div class="flex flex-row justify-between mx-16 -my-8">
+                    <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                        <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                        <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                        <div class="flex flex-row justify-between gap-20 items-center my-8">
+                            <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                            <button class="btn-more">خرید</button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                        <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                        <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                        <div class="flex flex-row justify-between gap-20 items-center my-8">
+                            <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                            <button class="btn-more">خرید</button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                        <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                        <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                        <div class="flex flex-row justify-between gap-20 items-center my-8">
+                            <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                            <button class="btn-more">خرید</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-row justify-between mx-16 -mt-16">
+                    <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                        <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                        <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                        <div class="flex flex-row justify-between gap-20 items-center my-8">
+                            <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                            <button class="btn-more">خرید</button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                        <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                        <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                        <div class="flex flex-row justify-between gap-20 items-center my-8">
+                            <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                            <button class="btn-more">خرید</button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                        <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                        <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                        <div class="flex flex-row justify-between gap-20 items-center my-8">
+                            <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                            <button class="btn-more">خرید</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--tablet-->
+            <div class="lg:hidden">
+                <div class="hidden md:flex flex-row justify-between items-center mt-44">
+                    <h2 class="mr-16 text-xl font-bold text-cyan-800 border-2 border-cyan-700 rounded-md px-2 py-2">آموزش‌های رایگان</h2>
+                    <button class="btn-more ml-16">بیشتر</button>
+                </div>
+                <div class="hidden md:flex flex-col justify-between items-center mx-16">
+                    <div class="flex flex-row justify-between mx-16 -my-8">
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-between mx-16 -my-8">
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-between mx-16 -mt-16">
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--mobile-->
+            <div class="md:hidden">
+                <div class="flex flex-row justify-between items-center mt-44">
+                    <h2 class="mr-16 text-xl font-bold text-cyan-800 border-2 border-cyan-700 rounded-md px-2 py-2">آموزش‌های رایگان</h2>
+                    <button class="btn-more ml-16">بیشتر</button>
+                </div>
+                <div class="flex flex-col justify-between items-center mx-16">
+                    <div class="flex flex-row justify-between mx-16 -my-8">
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-between mx-16 -my-8">
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-between mx-16 -my-8">
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-between mx-16 -my-8">
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-between mx-16 -my-8">
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-between mx-16 -mt-16">
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section>
+            <!--desktop-->
+            <div class="hidden lg:flex flex-row justify-between items-center mt-44">
+                <h2 class="mr-16 text-xl font-bold text-cyan-800 border-2 border-cyan-700 rounded-md px-2 py-2">آموزش‌های در دست انتشار</h2>
+                <button class="btn-more ml-16">بیشتر</button>
+            </div>
+            <div class="hidden lg:flex flex-col justify-between items-center mx-16">
+                <div class="flex flex-row justify-between mx-16 -my-8">
+                    <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                        <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                        <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                        <div class="flex flex-row justify-between gap-20 items-center my-8">
+                            <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                            <button class="btn-more">خرید</button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                        <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                        <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                        <div class="flex flex-row justify-between gap-20 items-center my-8">
+                            <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                            <button class="btn-more">خرید</button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                        <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                        <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                        <div class="flex flex-row justify-between gap-20 items-center my-8">
+                            <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                            <button class="btn-more">خرید</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-row justify-between mx-16 -mt-16">
+                    <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                        <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                        <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                        <div class="flex flex-row justify-between gap-20 items-center my-8">
+                            <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                            <button class="btn-more">خرید</button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                        <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                        <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                        <div class="flex flex-row justify-between gap-20 items-center my-8">
+                            <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                            <button class="btn-more">خرید</button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                        <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                        <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                        <div class="flex flex-row justify-between gap-20 items-center my-8">
+                            <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                            <button class="btn-more">خرید</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--tablet-->
+            <div class="lg:hidden">
+                <div class="hidden md:flex flex-row justify-between items-center mt-44">
+                    <h2 class="mr-16 text-xl font-bold text-cyan-800 border-2 border-cyan-700 rounded-md px-2 py-2">آموزش‌های در دست انتشار</h2>
+                    <button class="btn-more ml-16">بیشتر</button>
+                </div>
+                <div class="hidden md:flex flex-col justify-between items-center mx-16">
+                    <div class="flex flex-row justify-between mx-16 -my-8">
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-between mx-16 -my-8">
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-between mx-16 -mt-16">
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--mobile-->
+            <div class="md:hidden">
+                <div class="flex flex-row justify-between items-center mt-44">
+                    <h2 class="mr-16 text-xl font-bold text-cyan-800 border-2 border-cyan-700 rounded-md px-2 py-2">آموزش‌های در دست انتشار</h2>
+                    <button class="btn-more ml-16">بیشتر</button>
+                </div>
+                <div class="flex flex-col justify-between items-center mx-16">
+                    <div class="flex flex-row justify-between mx-16 -my-8">
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-between mx-16 -my-8">
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-between mx-16 -my-8">
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-between mx-16 -my-8">
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-between mx-16 -my-8">
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-row justify-between mx-16 -mt-16">
+                        <div class="flex flex-col items-center bg-stone-200 border-2 border-cyan-700 rounded-xl my-16 mx-1">
+                            <img src="https://faradars.org/wp-content/uploads/2018/03/fvmth109-svg.svg" alt="">
+                            <h1 style="width: 300px; margin-right: 25px; margin-top: 30px;">آموزش ریاضی عمومی 1 + حل مثال و تست کنکور کارشناسی ارشد</h1>
+                            <div class="flex flex-row justify-between gap-20 items-center my-8">
+                                <h1 class="text-xl text-cyan-800 font-bold">219000 تومان</h1>
+                                <button class="btn-more">خرید</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section>
+    <footer class="bg-cyan-100">
+        <div class="container mx-auto my-auto">
+            <div class="flex flex-col lg:flex-row items-center justify-between">
+                <div class="grid grid-cols-1 my-12 gap-12 text-cyan-900 sm:grid-cols-3 sm:gap-32">
+                    <div>
+                        <h2 class="font-bold leading-8 border-b-2 border-cyan-700 mb-2">بخش های سایت</h2>
+                        <ul class="space-y-2">
+                            <li><a href="#">خانه</a></li>
+                            <li><a href="#">محصولات</a></li>
+                            <li><a href="#">مقالات آموزشی</a></li>
+                            <li><a href="#">تماس با ما</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="font-bold leading-8 border-b-2 border-cyan-700 mb-2">اخبار</h2>
+                        <ul class="space-y-2">
+                            <li><a href="#">محصولات جدید</a></li>
+                            <li><a href="#">مقالات جدید</a></li>
+                            <li><a href="#">تخفیف ها</a></li>
+                            <li><a href="#">جشنواره ها</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="font-bold leading-8 border-b-2 border-cyan-700 mb-2">درباره ما</h2>
+                        <ul class="space-y-2">
+                            <li><a href="#">درباره ما</a></li>
+                            <li><a href="#">تماس با ما</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <h2 class="text-2xl"><strong style="color:#00757a; font-size: 25px;">S</strong>itmong
+                    </h2>
+                    <p class="my-4 font-bold text-cyan-900">تمامی حقوق این وب سایت محفوظ می‌باشد</p>
+                    <div class="flex flex-row w-40 gap-1">
+                        <a href=""><img src="../css/images/4494479.png" alt=""></a>
+                        <a href=""><img src="../css/images/4494481.png" alt=""></a>
+                        <a href=""><img src="../css/images/4494489.png" alt=""></a>
+                        <a href=""><img src="../css/images/4494495.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    </section>
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('dropdown', () => ({
+                open: false,
+
+                toggle() {
+                    this.open = !this.open
+                },
+            }))
+        })
+    </script>
+
+</body>
+
+</html>

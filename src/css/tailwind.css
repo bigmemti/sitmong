@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    @font-face {
+        font-family: Vazir;
+        src: url("./fonts/Vazir.eot");
+        src: url("./fonts/Vazir.eot?#iefix")format("embedded-opentype"),
+        url("./fonts/Vazir.woff2")format("woff2"),
+        url("./fonts/Vazir.woff")format("woff"),
+        url("./fonts/Vazir.ttf")format("truetype");
+    }
+}
+@layer components{
+    .btn{
+        @apply bg-cyan-800 text-white rounded-full h-7 w-7 transition duration-300 ease-in-out hover:bg-slate-300 hover:text-cyan-800
+    }
+    .btn-mob{
+        @apply bg-cyan-800 text-white rounded-full h-10 transition duration-300 ease-in-out hover:bg-slate-300 hover:text-cyan-800
+    }
+    .btn-more{
+        @apply bg-cyan-800 text-white rounded-md h-10 w-20 transition duration-300 ease-in-out hover:bg-slate-300 hover:text-cyan-800 hover:font-bold
+    }
+    .dropdown-mob{
+        @apply absolute top-10 bg-white border rounded-lg py-4 px-8 w-full
+    }
+    .nav-item{
+        @apply text-cyan-700 transition duration-300 ease-in-out hover:border-b-2 hover:border-cyan-600 hover:text-cyan-900
+    }
+    .first-box{
+        @apply mt-6 mx-16 border-2 border-cyan-700 rounded-md text-cyan-800 hover:border-cyan-600 hover:text-cyan-600
+    }
+    .nav-item-active{
+        @apply text-cyan-900 border-b-2 border-cyan-600
+     }
+     .text-b-icon{
+        @apply opacity-0 transition duration-300 group-hover:opacity-100 text-xl font-bold text-center
+     }
+    [x-cloak] {
+        display: none !important;
+    }
+}

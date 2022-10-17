@@ -2,7 +2,14 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    fontFamily:{
+      vazir:['vazir']
+    },
+    extend: {
+      screens: {
+        'sm': '459px',
+      },
+    },
   },
   plugins: [],
 }
