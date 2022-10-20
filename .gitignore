@@ -1,0 +1,6 @@
+
+.env
+/bootstrap/
+/vendor/
+/storage/
+*.vpp.lck
